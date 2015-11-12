@@ -1,6 +1,6 @@
 'use strict';
 var path = require('path'),
-webpack = require('webpack'),
+webpack = require('webpack');
 
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
         path: path.resolve(__dirname, 'build', 'js'), 
         filename: 'bundle.js',
         chunkFilename: '[hash].[id].bundle.js',
-        publicPath: 'build/'
+        publicPath: 'tests/'
     },
     module: {
         loaders: [
@@ -54,11 +54,6 @@ resolve: {
 
 plugins: [
 
-new webpack.optimize.UglifyJsPlugin({
-    compress: {
-        warnings: false
-    }
-}),
 
 new webpack.optimize.CommonsChunkPlugin('common.bundle.js')
 ]

@@ -1,11 +1,14 @@
 import angular from 'angular';
 import './../../css/main.scss';
-import MainCtrl from "./MainCtrl.js";
-import githubService from "./githubService.js";
+import MainCtrl from "./MainCtrl";
+import githubService from "./githubService";
+import * as Pagination from 'angular-utils-pagination';
 
 angular.module('App',[])
 	.controller('MainCtrl', MainCtrl)	
-	.service("githubService", githubService);
+	.service("githubService", githubService)
+	
+	
 
 
 

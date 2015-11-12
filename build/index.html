@@ -17,11 +17,14 @@
 	</div>
 	<div class="main-result" ng-show="reponame">
 		<ul class="main-result-list">
-			<li  class="main-result-list-item" ng-repeat='event in events'>
+			<li  class="main-result-list-item" ng-repeat="event in events">
 			<a class="main-result-list-item-link" href="{{event.html_url}}">
 			<img class="main-result-list-item-link__img" ng-src="{{event.owner.avatar_url}}" width="30"> <span class="main-result-list-item-link__title">{{event.full_name}}   </span><span class="main-result-list-item-link__decription">   {{event.description}} </span></a>
 			</li>
+
+			
 		</ul>
+<!-- 		<dir-pagination-controls></dir-pagination-controls> -->
 	</div>
 </div>
 

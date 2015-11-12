@@ -1,7 +1,7 @@
 'use strict';
 var path = require('path'),
-webpack = require('webpack'),
-ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+webpack = require('webpack');
+
 
 module.exports = {
     watch: true,
@@ -26,7 +26,7 @@ module.exports = {
         },
         {
             test: /.jsx?$/,
-            loader: 'babel-loader',
+            loader: 'babel',
             exclude: /node_modules/,
             query: {
                 presets: ['es2015']
