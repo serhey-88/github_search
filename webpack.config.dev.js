@@ -9,10 +9,11 @@ module.exports = {
         index: './assets/js/angular/app.js'
     },
     output: {
-        path: path.resolve(__dirname, 'build', 'js'), 
+        path: path.resolve(__dirname, 'js'), 
+        publicPath: '/js/',
         filename: 'bundle.js',
         chunkFilename: '[hash].[id].bundle.js',
-        publicPath: 'build/'
+        
     },
     module: {
         loaders: [
@@ -54,11 +55,6 @@ resolve: {
 
 plugins: [
 
-new webpack.optimize.UglifyJsPlugin({
-    compress: {
-        warnings: false
-    }
-}),
 
 new webpack.optimize.CommonsChunkPlugin('common.bundle.js')
 ]

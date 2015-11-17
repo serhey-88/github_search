@@ -5,3 +5,9 @@ npm-debug.log
 
 #npm
 node_modules/
+
+#public folder
+build/
+
+#test_bundle_file
+test/test.bundle.js
